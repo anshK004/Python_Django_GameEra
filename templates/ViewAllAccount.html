@@ -1,0 +1,62 @@
+{% load static %}
+<html>
+    <style>
+        body{
+            background-image:url("{% static 'images/triangle13.jpg' %}");
+            background-position: center;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        .texttheme
+        {
+            width:300px;
+            height:25px;
+            border:inset;
+            border-color:blue;
+        }
+        .show
+         {
+             margin-top:100px;
+             font-size:15px;
+             font-family:arial;
+             text-align:center;
+             background-color:rgba(25,180,157,1.0);
+             {#border-radius: 50px;#}
+             text-transform: uppercase;
+             width: 1500px
+
+         }
+    </style>
+    
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <body>
+        <div>
+    <table width="100%" class="tabtheme">
+    <tr >
+        <td class="bg"><a href="AdminHome" class="link">home</a></td>
+        <td class="bg"><a href="AdminSetting" class="link">Setting</a></td>
+        <td class="bg"><a href="AdminView" class="link">View</a></td>
+        <td class="bg"><a href="Account" class="link">Account</a></td>
+        <td class="bg"><a href="logout" class="link">logout</a></td>
+    </tr>
+    </table> 
+            </div>
+        <div>
+        <table class="show"   cellpadding="10px" align="center" >
+            <tr>
+                <td><h2>Id</h2></td>
+                <td><h2>Password</h2></td>
+                <td><h2>Full Name</h2></td>
+                <td><h2>Post</h2></td>
+                <td><h2>Salary</h2></td>
+                <td><h2>DOB</h2></td>
+                <td><h2>Contact</h2></td>
+                <td><h2>Gender</h2></td>
+                <td><h2>Address</h2></td>
+                <td><h2>City</h2></td>
+            </tr>
+            <tr style="background-color: rgba(255,255,255,0.6); font-size: 17px;" width="100%"> <td colspan="10">{{ recor }}</td></tr>
+        </table>
+        </div>
+    </body>
+</html>

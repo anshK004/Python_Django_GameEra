@@ -1,0 +1,72 @@
+{% load static %}
+<html>
+    <style>
+        body{
+            background-image:url("{% static 'images/triangle13.jpg' %}");
+            background-position: center;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        .texttheme
+        {
+            width:300px;
+            height:25px;
+            border:inset;
+            border-color:blue;
+        }
+        .show
+         {
+             margin-top:100px;
+             font-size:15px;
+             font-family:arial;
+             text-align:center;
+             background-color:rgba(25,180,157,1.0);
+             {#border-radius: 50px;#}
+             text-transform: uppercase;
+             width: 1500px
+
+         }
+    </style>
+    
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <body>
+        <div>
+    <table width="100%" class="tabtheme">
+    <tr >
+        <td class="bg"><a href="AdminHome" class="link">home</a></td>
+        <td class="bg"><a href="AdminSetting" class="link">Setting</a></td>
+        <td class="bg"><a href="AdminView" class="link">View</a></td>
+        <td class="bg"><a href="Account" class="link">Account</a></td>
+        <td class="bg"><a href="logout" class="link">logout</a></td>
+    </tr>
+    </table> 
+            </div>
+        <div>
+        <table class="show"   cellpadding="10px" align="center" >
+            <tr>
+                <td><h2>Complain Id</h2></td>                
+                <td><h2>Full Name</h2></td>
+                <td><h2>Complaint</h2></td>
+                <td><h2>Complaint Date</h2></td>
+                <td><h2>Contact</h2></td>
+                <td><h2>Complaint Status</h2></td>
+                
+            </tr>
+            
+            {% block content %}
+            {% for data in my_data %}
+            <tr style="background-color: rgba(255,255,255,0.6); font-size: 17px;" width="100%">
+                <td>{{ data.complaint_id }}</td>
+                <td>{{ data.fullname }}</td>
+                <td>{{ data.complaint }}</td>
+                <td>{{ data.complaint_date }}</td>
+                <td>{{ data.contact }}</td>
+                <td>{{ data.complaint_status  }}</td>
+            </tr>
+            {% endfor %}
+            {% endblock content %}
+        
+        </table>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,75 @@
+{% load static %}
+<html>
+    <style>
+        body{
+            background-image:url("{% static 'images/triangle13.jpg' %}");
+            background-position: center;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        .texttheme
+        {
+            width:300px;
+            height:25px;
+            border:inset;
+            border-color:blue;
+        }
+    </style>
+    
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <body>
+        <div>
+    <table width="100%" class="tabtheme">
+    <tr >
+        <td class="bg"><a href="AdminHome" class="link">home</a></td>
+        <td class="bg"><a href="AdminSetting" class="link">Setting</a></td>
+        <td class="bg"><a href="AdminView" class="link">View</a></td>
+        <td class="bg"><a href="Account" class="link">Account</a></td>
+        <td class="bg"><a href="logout" class="link">logout</a></td>
+    </tr>
+    </table> 
+            </div>
+        <div>
+        <form action="GamingZoneRegister" method="post">
+            {% csrf_token %}
+    <table class="table">
+            <tr align="center" >
+                <td colspan="4"><h1>Account Creation</h1></td>
+            </tr>
+            <tr>
+                <td>Registration Number</td>
+                <td><input type="text" name="regno" class="texttheme"></td>
+                <td>Place Name</td>
+                <td><input type="text" name="pName" class="texttheme"></td>
+                
+            </tr>
+            <tr>
+                <td>Details</td>
+                <td><textarea name="details" class="texttheme"></textarea></td>
+                <td>Contact</td>
+                <td><input type="number" name="cont" class="texttheme"></td>
+            </tr>
+            <tr>
+                <td>Services</td>
+                <td><textarea name="services" class="texttheme"></textarea></td>
+                <td>Charges</td>
+                <td><input type="number" name="charges" class="texttheme"></td>
+                
+            </tr>
+            
+            <tr align="center">                
+                <td colspan="2">Address</td>
+                <td colspan="2" align="left"><textarea name="address" class="texttheme"></textarea></td>
+                
+            </tr>
+            
+            <tr align="center">
+                <td colspan="4">
+                    <input type="submit" value="SUBMIT">
+                </td>
+            </tr>
+        </table>
+            </form>
+            </div>
+    </body>
+</html>

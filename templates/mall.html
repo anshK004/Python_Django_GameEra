@@ -1,0 +1,77 @@
+{% load static %}
+<html>
+    <style>
+        body{
+            background-image:url("{% static 'images/triangle3.jpg' %}");
+            background-position: center;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        .texttheme
+        {
+            width:200px;
+            height:25px;
+            border:inset;
+            border-color:blue;
+        }
+    </style>
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <body>
+          <table width="100%" class="tabtheme">
+    <tr >
+        <td class="bg"><a href="homepage" class="link">home</a></td>
+        <td class="bg"><a href="aboutus" class="link">about us</a></td>
+        <td class="bg"><a href="loginlink" class="link">login</a></td>
+        <td class="bg"><a href="signup" class="link">sign up</a></td>
+        <td class="bg"><a href="contactus" class="link">contact us</a></td>
+    </tr>
+    </table>   
+            <form action="AdminRegister" method="post">
+                {% csrf_token %}
+    <table class="table">
+            <tr align="center" >
+                <td colspan="4"><h1> GET REGISTERED</h1></td>
+            </tr>
+            <tr>
+                <td>User Id</td>
+                <td><input type="text" name="uid" class="texttheme"></td>
+                <td>Password</td>
+                <td><input type="password" name="pwd" class="texttheme"></td>
+                
+            </tr>
+            <tr>
+                <td>Full Name</td>
+                <td><input type="text" name="fname" class="texttheme"></td>
+                <td>Email Id</td>
+                <td><input type="email" name="mail" class="texttheme"></td>
+                
+            </tr>
+            <tr>
+                <td>Contact</td>
+                <td><input type="number" name="cont" class="texttheme"></td>
+                <td>Gender</td>
+                <td><input type="text" name="gender" class="texttheme"></td>
+                
+            </tr>
+            <tr>
+                <td>DOB</td>
+                <td><input type="date" name="dob" class="texttheme"></td>
+                <td>Address</td>
+                <td><textarea name="address" class="texttheme"></textarea></td>
+               
+            </tr>
+            <tr>
+                <td>Registration No</td>
+                <td><input type="text" name="regno" class="texttheme"></td>
+                 <td>Organization Name</td>
+                <td><textarea name="orgname" class="texttheme"></textarea></td>
+            </tr>
+            <tr align="center">
+                <td colspan="4">
+                    <input type="submit" value="SUBMIT">
+                </td>
+            </tr>
+        </table>
+            </form>
+    </body>        
+</html>

@@ -1,0 +1,54 @@
+{% load static %}
+<html>
+    <style>
+        body{
+            background-image:url("{% static 'images/triangle12.jpg' %}");
+            background-position: center;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        .texttheme
+        {
+            width:300px;
+            height:25px;
+            border:inset;
+            border-color:blue;
+        }
+    </style>
+    
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    
+    <body>
+        <div>
+    <table width="100%" class="tabtheme">
+    <tr >
+        <td class="bg"><a href="EmployeeHome" class="link">home</a></td>
+        <td class="bg"><a href="EmployeeSetting" class="link">Setting</a></td>
+        <td class="bg"><a href="EmployeeView" class="link">View</a></td>
+        <td class="bg"><a href="EmpAccount" class="link">Account</a></td>
+        <td class="bg"><a href="logout" class="link">logout</a></td>
+    </tr>
+    </table> 
+            </div>
+        <div>
+        <table class="table">
+            <tr align="center" >
+                <td colspan="2"><h1>View</h1></td>
+            </tr>
+            <tr>
+                <td style="text-align:center;" class="choice"><a href="ViewEmpGamingZone" class="link">View Gaming Zone Details</a></td>
+            </tr>
+            <tr><td>&nbsp</td></tr>
+            <tr>
+                <td style="text-align:center;" class="choice"><a href="ViewEmpComplaint" class="link">View Compliant</a></td>
+            </tr>
+            <tr><td>&nbsp</td></tr>
+            <tr>
+                <td style="text-align:center;" class="choice"><a href="ViewEmpBooking" class="link">View Booking</a></td>
+            </tr>
+            
+            
+        </table>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+{% load static %}
+<html>
+    <style>
+        body{
+            background-image:url("{% static 'images/triangle1.jpg' %}");
+            background-position: center;
+            background-size: 100%;
+        }
+    </style>
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <body>
+          <table width="100%" class="tabtheme">
+   <tr >
+        <td class="bg"><a href="homepage" class="link">home</a></td>
+        <td class="bg"><a href="aboutus" class="link">about us</a></td>
+        <td class="bg"><a href="loginlink" class="link">login</a></td>
+        <td class="bg"><a href="signup" class="link">sign up</a></td>
+        <td class="bg"><a href="contactus" class="link">contact us</a></td>
+    </tr>
+</table>  
+        <div>
+        <table class="table">
+            <tr style="text-align:center;"><td><h1>REGISTER HERE</h1></td></tr>
+            <tr>
+                <td style="text-align:center;" class="choice"><a href="customer" class="link">Customer</a></td>
+            </tr>
+            <tr><td>&nbsp</td></tr>
+            <tr>
+                <td style="text-align:center;" class="choice"><a href="mall" class="link">Mall</a></td>
+            </tr>
+        </table>
+        </div>
+    </body>
+</html>

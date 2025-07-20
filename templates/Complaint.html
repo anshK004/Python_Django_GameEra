@@ -1,0 +1,74 @@
+{% load static %}
+<html>
+    <style>
+        body{
+            background-image:url("{% static 'images/triangle16.jpg' %}");
+            background-position: center;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        .texttheme
+        {
+            width:300px;
+            height:25px;
+            border:inset;
+            border-color:blue;
+        }
+    </style>
+    
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <body>
+        <div>
+    <table width="100%" class="tabtheme">
+    <tr >
+        <td class="bg"><a href="CustomerHome" class="link">home</a></td>
+        <td class="bg"><a href="CustomerSetting" class="link">Setting</a></td>
+        <td class="bg"><a href="CustomerView" class="link">View</a></td>
+        <td class="bg"><a href="book" class="link">Book</a></td>
+        <td class="bg"><a href="logout" class="link">logout</a></td>
+    </tr>
+    </table> 
+            </div>
+        <div>
+        <form action="ComplaintRegister" method="post">
+            {% csrf_token %}
+        <table  class="table">
+            <tr align="center" >
+                <td colspan="2"><h1>Register Complaint</h1></td>
+            </tr>
+           
+             <tr align="center">
+                <td >Comlpaint Id</td>
+                <td><input type="text" name="cid" class="texttheme"></td>                
+            </tr>
+            <tr align="center">
+                <td>Full Name</td>
+                <td><input type="text" name="fName" class="texttheme"></td>                
+            </tr>
+            <tr align="center">
+                <td>Complaint</td>
+                <td><textarea name="complaint" class="texttheme"></textarea></td>                
+            </tr>
+            <tr align="center">
+                <td>Complaint Date</td>
+                <td><input type="date" name="cDate" class="texttheme"></td>                
+            </tr>
+            <tr align="center">
+                <td>Contact</td>
+                <td><input type="number" name="contact" class="texttheme"></td>                
+            </tr>
+            <tr align="center">
+                <td>Complaint Status</td>
+                <td><input type="text" name="status" class="texttheme"></td>           
+            </tr>          
+            
+                <tr align="center">
+                    <td colspan="2">
+                        <input type="submit" value="Submit">
+                    </td>
+                </tr>
+            </table>
+            </form>
+            </div>
+    </body>
+</html>

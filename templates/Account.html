@@ -1,0 +1,60 @@
+{% load static %}
+<html>
+    <style>
+        body{
+            background-image:url("{% static 'images/triangle12.jpg' %}");
+            background-position: center;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        .texttheme
+        {
+            width:300px;
+            height:25px;
+            border:inset;
+            border-color:blue;
+        }
+    </style>
+    
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    
+    <body>
+        <div>
+    <table width="100%" class="tabtheme">
+    <tr >
+        <td class="bg"><a href="AdminHome" class="link">home</a></td>
+        <td class="bg"><a href="AdminSetting" class="link">Setting</a></td>
+        <td class="bg"><a href="AdminView" class="link">View</a></td>
+        <td class="bg"><a href="Account" class="link">Account</a></td>
+        <td class="bg"><a href="logout" class="link">logout</a></td>
+    </tr>
+    </table> 
+            </div>
+        <div>
+        <table class="table">
+            <tr align="center" >
+                <td colspan="2"><h1>Accounts</h1></td>
+            </tr>
+            <tr>
+                <td style="text-align:center;" class="choice"><a href="GamingZone" class="link">Enter Gaming Zone Details</a></td>
+            </tr>
+            <tr><td>&nbsp</td></tr>
+            <tr>
+                <td style="text-align:center;" class="choice"><a href="AccountCreation" class="link">Create Account</a></td>
+            </tr>
+            <tr><td>&nbsp</td></tr>
+            <tr>
+                <td style="text-align:center;" class="choice"><a href="AccountDelete" class="link">Delete Account</a></td>
+            </tr>
+            <tr><td>&nbsp</td></tr>
+            <tr>
+                <td style="text-align:center;" class="choice"><a href="ViewAllAccount" class="link">View All Account</a></td>
+            </tr>
+            <tr><td>&nbsp</td></tr>
+            <tr>
+                <td style="text-align:center;" class="choice"><a href="SearchAccount" class="link">Search Account</a></td>
+            </tr>
+        </table>
+        </div>
+    </body>
+</html>
